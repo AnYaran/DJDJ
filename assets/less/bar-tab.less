@@ -1,0 +1,352 @@
+/*------------------------------
+  底部菜单栏
+--------------------------------*/
+.bar-tab {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1010;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: @bar-base-height;
+	line-height: @bar-base-height;
+	background-color: @white;
+	border-top: @border-default;
+	> div {
+		position: relative;
+		height: inherit;
+		&.active {
+			> a {
+				color: @green;
+				[class*="icon-"] {
+					background-position-y: -24px;
+				}
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				width: auto;
+				height: 0;
+				border-bottom: 2px solid @green;
+			}
+		}
+		> 	a {
+			position: relative;
+			display: block;
+			height: 100%;
+			padding-top: 4px;
+			color: @gray-dark;
+			text-align: center;
+
+		}
+	}
+	.tab-item {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+
+	}
+	[class*="icon-"] {
+		display: block;
+		margin: 0 auto;
+	}
+	.tab-label {
+		display: block;
+		padding-top: 2px;
+		line-height: 1;
+		font-size: 13px;
+		.text-overflow();
+	}
+	.has-submenu.open {
+		.submenu {
+			display: block;
+		}
+	}
+}
+
+/* 二级菜单 */
+.submenu {
+	display: none;
+	position: absolute;
+	bottom: 59px;
+	left: 50%;
+	min-width: 94px;
+	transform: translateX(-50%);
+	border: @border-default;
+	background-color: @white;
+	border-radius: 5px;
+	&:after,
+	&:before {
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		width: 0;
+		height: 0;
+		margin-left: -8px;
+		content: '';
+		border-right: 8px solid transparent;
+		border-top: 8px solid #e0e0e0;
+		border-left: 8px solid transparent;
+	}
+	&:after {
+		bottom: -7px;
+		margin-left: -7px;
+		border-right: 7px solid transparent;
+		border-top: 7px solid #ffffff;
+		border-left: 7px solid transparent;
+	}
+	a {
+		position: relative;
+		display: block;
+		padding: 14px;
+		line-height: 1;
+		color: @gray-dark;
+		font-size: @font-size-base;
+		text-align: center;
+		&:hover,
+		&:active,
+		&.active {
+			color: @green;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			right: 10px;
+			left: 10px;
+			bottom: 0;
+			width: auto;
+			height: 0;
+			border-bottom: @border-default;
+		}
+		&:last-child {
+			&:after {
+				border: 0;
+			}
+		}
+	}
+}
+
+/*-------------------------------
+  商品详情页底部工具栏
+---------------------------------*/
+.bar-btn-group {
+	.clearfix;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 49px;
+	z-index: 1010;
+	border-top: @border-default;
+	background-color: @white;
+	.btn-left,
+	.btn-right {
+		flex: 1;
+		margin-top: 5px;
+		margin-right: 10px;
+	}
+	.btn-talk,
+	.btn-favorite,
+	.btn-shop {
+		float: left;
+		width: 2.3rem;
+		height: 100%;
+		padding-top: 4px;
+		color: @gray-dark;
+		font-size: 13px;
+		text-align: center;
+		span {
+			display: block;
+			margin-top: 2px;
+		}
+	}
+	.btn-favorite {
+		&:hover,
+		&:active,
+		&.active {
+			.icon-star-sm {
+				background-position: -24px -168px;
+			}
+		}
+	}
+	.btn-shop {
+		border-left: @border-default;
+		& + .btn-left,
+		& ~ .btn-right {
+			width: 4rem;
+			.btn {
+				padding-top: 11px;
+				padding-bottom: 11px;
+				font-size: 15px !important;
+			}
+		}
+	}
+	.btn-talk {
+		border-right: @border-default;
+		&:hover,
+		&:active,
+		&.active {
+			.icon-talk {
+				background-position: 0 -168px;
+			}
+		}
+	}
+}
+
+/* 评价页底部按钮 */
+.footer-bar-btn {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 6px 10px;
+	z-index: 1010;
+	border-top: @border-default;
+	background-color: @white;
+}
+
+
+/*-----------------------------
+  收藏编辑底部工具栏
+-------------------------------*/
+.bar-shoppingcart {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1010;
+	border-top: @border-default;
+	background-color: @white;
+	padding: 10px;
+	label {
+		display: inline-block;
+		line-height: 36px;
+		font-size: 17px;
+		color: @gray-dark;
+		vertical-align: top;
+	}
+	.cart-total {
+		height: 100%;
+		margin-right: 10px;
+		text-align: right;
+		span {
+			display: block;
+		}
+		.cart-sum {
+			color: @gray-dark;
+			font-size: 15px;
+			line-height: 21px;
+			i {
+				font-size: 16px;
+				color: @orange;
+			}
+		}
+		.cart-freight {
+			font-size: 13px;
+			color: @gray-dark;
+		}
+	}
+	.btn-outer {
+		margin-left: 100px;
+	}
+	.btn {
+		width: 94px;
+		padding: 10px 0;
+	}
+	.btn-block {
+		width: 100%;
+	}
+}
+
+.bar-tab + .bar-shoppingcart {
+	bottom: 49px !important;
+}
+
+.bar-actions {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1010;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: @white;
+	padding: 15px 0 15px 30px;
+	> a.action-right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 0 15px;
+		border-left: 1px solid #e0e0e0;
+		color: @gray-darker;
+		font-size: 14px;
+		line-height: 44px;
+		text-align: center;
+		&:hover,
+		&:active {
+			background-color: rgba(0,0,0,.1);
+		}
+	}
+	&+#wrapper {
+		top: 44px;
+	}
+}
+.bar-secondary~#wrapper {
+	bottom: 104px;
+}
+.second-header-bar {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.second-header-bar + .third-header-bar {
+	top: 89px;
+}
+.third-header-bar ~ #wrapper {
+	top: 133px;
+}
+.form-search-wrapper[mode="white"] + .third-header-bar {
+	top: 113px !important;
+}
+.form-search-wrapper[mode="white"] ~ #wrapper {
+	top: 159px !important;
+}
+
+.form-search-wrapper[mode="white"] + #wrapper {
+	top: 113px !important;
+}
+
+/* 订单详情页底部 */
+.bar-order-dt {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1010;
+	border-top: @border-default;
+	background-color: @white;
+	padding: 10px;
+}
+
+.bar-order-dt + #wrapper {
+	bottom: 61px;
+}
+
+.header-bar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1010;
+}
+.header-bar  + #wrapper {
+	top: 44px;
+}

@@ -1,0 +1,52 @@
+//
+//
+// Table views
+// -----------------------------------------------
+
+.table-view {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+	list-style: none;
+	background-color: @white;
+	border-top: @border-default;
+	border-bottom: @border-default;
+}
+
+.table-view-cell {
+	position: relative;
+	padding: 11px 65px 11px 15px;
+	overflow: hidden;
+	border-bottom: 1px solid #dbdbdb;
+	&:last-child {
+		border-bottom: 0;
+	}
+	> a:not(.btn) {
+		position: relative;
+		display: block;
+		padding: inherit;
+		margin: -11px -65px -11px -15px;
+		overflow: hidden;
+		color: inherit;
+
+		&:active {
+			background-color: #eee;
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.table-view-title {
+	margin: -11px -50px 0 0;
+	padding: 15px;
+	line-height: 1;
+	font-size: 14px;
+	color: @gray;
+	font-weight: normal;
+	border-bottom: 1px solid #dbdbdb;
+}
+.table-view-main {
+	color: @gray-darker;
+}

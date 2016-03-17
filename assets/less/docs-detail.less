@@ -1,0 +1,516 @@
+/*-------------------
+  商品详情页
+---------------------*/
+/* 基本信息 */
+.dt-binfo {
+	position: relative;
+	padding: 8px 10px;
+	background-color: @white;
+	.text {
+		color: @gray-darker;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: normal;
+		word-break: break-all;
+	}
+	.dt-price {
+		margin-top: 5px;
+		line-height: 32px;
+		.price {
+			display: inline-block;
+			color: @red-darker;
+			font-size: 18px;
+		}
+		del {
+			display: inline-block;
+			margin-left: 10px;
+			font-size: 12px;
+			color: @gray;
+		}
+	}
+
+	.meta {
+		display: flex;
+		margin-top: 10px;
+		color: @gray;
+		font-size: 14px;
+		span {
+			flex: 1;
+			display: inline-block;
+			text-align: center;
+			.text-overflow();
+			&:first-child {
+				text-align: left;
+			}
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+}
+
+/* 评价 */
+.dt-cmt-wrapper {
+	padding: 0 10px;
+	background-color: @white;
+	border-top: @border-default;
+	border-bottom: @border-default;
+	.dt-cmt-tit {
+		padding: 14px 0;
+		font-size: 17px;
+		color: @gray-darker;
+		border-bottom: 1px solid #e6e6e6;
+		line-height: 24px;
+		small {
+			display: inline-block;
+			font-size: 15px;
+		}
+	}
+}
+.dt-cmt-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	> li.dt-cmt-item {
+		padding: 15px 0;
+		border-bottom: @border-default;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.dt-cmt-txt {
+		margin-top: 10px;
+		font-size: 14px;
+		color: @gray-dark;
+		line-height: 23px;
+		word-break: break-all;
+	}
+	.dt-cmt-time {
+		margin-top: 5px;
+		font-size: 12px;
+		color: @gray;
+		line-height: 1;
+	}
+	.uinfo {
+		.clearfix;
+	}
+	.avatar {
+		float: left;
+		margin-left: 5px;
+		img {
+			width: 51px;
+			height: 51px;
+			border-radius: 50%;
+		}
+	}
+	.uname {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 15px;
+		color: @gray-darker;
+		line-height: 1;
+	}
+	.uinfo-main {
+		margin-left: 66px;
+	}
+}
+.dt-cmt-reply {
+	margin-top: 10px;
+	padding-top: 8px;
+	font-size: 14px;
+	color: @gray-dark;
+	word-break: break-all;
+	line-height: 19px;
+	border-top: @border-default;
+	span {
+		color: @orange-darker;
+	}
+}
+
+/*---------------------
+  商品详情/商品参数
+-----------------------*/
+.dt-content-tit {
+	display: none;
+}
+.dt-tabs-nav +.tab-content {
+	.dt-content-tit {
+		display: block;
+	}
+}
+.dt-tabs-nav {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: @white;
+	a {
+		display: block;
+		flex: 1;
+		padding: 15px 0;
+		font-size: 17px;
+		color: @gray-dark;
+		text-align: center;
+		&.active {
+			position: relative;
+			color: @green;
+			border-bottom: 2px solid @green;
+		}
+		&:last-child {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 15px;
+				bottom: 15px;
+				width: 1px;
+				height: auto;
+				border-left: @border-default;
+			}
+		}
+	}
+}
+.tab-pane {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+.dt-content-main {
+	padding: 10px;
+	word-break: break-all;
+	overflow-x: hidden;
+	background-color: @white;
+	border-bottom: @border-default;
+}
+.tab-pane {
+	&:first-child {
+		.dt-content-main {
+			color: #7a7a7a;
+			font-size: 13px;
+			line-height: 20px;
+		}
+	}
+}
+
+#allmap {
+	width: 14.95rem;
+	height: 7.15rem;
+}
+
+/*--------------------
+  ������ϸ -- ��ͨ
+----------------------*/
+.dt-traffic {
+	margin-top: 0.5rem;
+	border-top: 1px solid #f1f1f1;
+	dl {
+		margin-top: 0.5rem;
+		font-size: 13px;
+		line-height: 20px;
+		dt {
+			float: left;
+			width: 54px;
+			color: #384247;
+		}
+		dd {
+			margin-left: 54px;
+			color: #5f6f79;
+			word-break: break-all;
+		}
+	}
+}
+
+/*-------------------
+  ¥����ϸ��Ϣ
+---------------------*/
+.house-info-list,
+.arg-list {
+	margin: 0 0 0 0.5rem;
+	padding: 0;
+	list-style: none;
+	li {
+		.clearfix;
+		font-size: 13px;
+		line-height: 24px;
+		label {
+			float: left;
+			width: 70px;
+			color: @gray;
+		}
+		span {
+			display: block;
+			margin-left: 70px;
+			word-break: break-all;
+			color: @gray-dark;
+		}
+	}
+}
+.house-info-list-horizontal {
+	.clearfix();
+	margin: 0 !important;
+	li {
+		float: left;
+		width: 50%;
+		label {
+			width: 40px;
+		}
+		span {
+			margin-left: 40px;
+			.text-overflow();
+		}
+	}
+}
+
+/*-----------------
+  商品参数
+-------------------*/
+.arg-list {
+	li {
+		label {
+			width: 93px;
+		}
+		span {
+			margin-left: 93px;
+		}
+	}
+}
+.dt-tabs-nav.affix {
+	position: fixed;
+	top: 44px;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	margin-top: 0;
+}
+.bar-btn-group +.affix {
+	position: absolute;
+	bottom: 55px;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding: 0.5rem 0;
+	background-color: @white;
+	border-top: 1px solid #e6e6e6;
+	text-align: center;
+}
+.dt-tabs-nav ~#wrapper {
+	top: 79px;
+}
+
+/*----------------------
+  弹出层
+------------------------*/
+#J_properModal {
+	display: none;
+	top: auto;
+	bottom: 0;
+	&.in {
+		.modal-dialog {
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+	.modal-dialog {
+		width: 16rem;
+		margin: 0 auto;
+		-webkit-transform: translateY(100%);
+		-ms-transform: translateY(100%);
+		transform: translateY(100%);
+		-webkit-transition: transform .3s ease-in-out;
+		transition: transform .3s ease-in-out;
+	}
+	.modal-header {
+		height: auto;
+		padding: 15px;
+		background-color: @white;
+		border-bottom: @border-default;
+	}
+	.modal-header-main {
+		.clearfix();
+	}
+	.modal-content {
+		border-radius: 0;
+		background-color: #fafafa;
+	}
+	.modal-body {
+		height: 200px;
+		padding: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.modal-footer {
+		padding: 8px 15px;
+		background-color: @white;
+		border-top: @border-default;
+		.btn {
+			padding: 12px 0 !important;
+		}
+	}
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+		background-color: @white;
+		border-radius: 50%;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 3px;
+			right: 3px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			line-height: 1;
+			background: url("../img/sprite.png") no-repeat;
+			background-size: 96px auto;
+			background-position: 0 -312px;
+			overflow: hidden;
+		}
+		&:hover,
+		&:active {
+			background-color: @white;
+		}
+	}
+	.dt-item-cover {
+		float: left;
+		img {
+			display: block;
+			width: 108px;
+			height: 78px;
+		}
+	}
+	.dt-item-binfo {
+		margin-left: 122px;
+		.dt-item-price {
+			font-size: 20px;
+			color: @red;
+			font-weight: normal;
+			i {
+				float: left;
+			}
+			b {
+				display: block;
+				margin-left: 20px;
+				font-weight: normal;
+				.text-overflow();
+			}
+		}
+		.dt-item-stock,
+		.dt-item-args {
+			margin-top: 7px;
+			font-size: @font-size-base;
+			color: @gray-dark;
+			line-height: 1;
+			.text-overflow();
+		}
+		.dt-item-stock {
+			color: @gray;
+		}
+	}
+	#J_SpecGroupOuter {
+		padding: 0 15px;
+	}
+	.spec-item {
+		padding: 15px 0;
+		border-bottom: @border-default;
+		.spec-title {
+			margin: 0;
+			font-size: 15px;
+			color: @gray-dark;
+			font-weight: normal;
+		}
+		.spec-list {
+			margin: 0;
+			i {
+				display: inline-block;
+				height: 35px;
+				margin: 15px 15px 0 0;
+				padding: 0 11px;
+				line-height: 33px;
+				border: @border-default;
+				background-color: @white;
+				border-radius: 3px;
+				text-align: center;
+				overflow: hidden;
+				vertical-align: middle;
+				font-style: normal;
+				font-size: 13px;
+				color: @gray-darker;
+				&.sel {;
+					background-color: @green;
+					border-color: @green;
+					color: @white;
+				}
+				&.disabled {
+					background-color: #e0e0e0;
+				}
+			}
+		}
+	}
+	.amount-outer {
+		margin: 0;
+		padding: 15px;
+		dt {
+			float: left;
+			color: @gray-dark;
+			font-size: 15px;
+			line-height: 44px;
+		}
+		dd {
+			margin-left: 100px;
+			padding: 0;
+		}
+	}
+}
+.amount-wrap {
+	height: 44px;
+	input {
+		width: 62px;
+		height: 44px;
+		margin: 0;
+		padding: 0;
+		border-left: 0;
+		border-right: 0;
+		border-top: @border-default;
+		border-bottom: @border-default;
+		text-align: center;
+		line-height: 35px;
+		vertical-align: top;
+		border-radius: 0;
+		font-size: 17px;
+		color: @gray-darker;
+		font-weight: bold;
+	}
+}
+
+.scroller-wrapper {
+	position: relative;
+	.scroller {
+		position: absolute;
+		width: 100%;
+	}
+}
+
+.dt-icn-list,
+.dt-icn-talk,
+.dt-icn-shop {
+	display: inline-block;
+	width: 13px;
+	height: 12px;
+	margin-right: 13px;
+	background: url("../img/icn_list_sm.png") no-repeat;
+	background-size: 13px auto;
+	overflow: hidden;
+}
+.dt-icn-talk {
+	background-image: url("../img/icn_talk_sm.png");
+}
+.dt-icn-shop {
+	background-image: url("../img/icn_shop_sm.png");
+}

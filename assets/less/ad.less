@@ -1,0 +1,180 @@
+/*-------------------------
+  ���
+---------------------------*/
+.ad {
+	display: block;
+	margin-top: .5rem;
+	width: 100%;
+}
+.ad-list {
+	.clearfix;
+	background-color: @white;
+	.list-item {
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 70px;
+		border-right: 1px solid #e0e0e0;
+		> a {
+			display: block;
+			height: 100%;
+			padding-right: 66px;
+			&:hover,
+			&:active {
+				background-color: #f5f5f5;
+			}
+		}
+		&:nth-child(even) {
+			border-right-width: 0;
+		}
+		span,em {
+			display: block;
+			padding-left: 12px;
+			.text-overflow();
+		}
+		span {
+			padding-top: 18px;
+			font-size: 15px;
+		}
+		em {
+			margin-top: 8px;
+			font-size: 11px;
+			color: #9b9b9b;
+		}
+		img {
+			position: absolute;
+			right: 9px;
+			top: 50%;
+			display: block;
+			width: 46px;
+			height: 46px;
+			margin-top: -23px;
+		}
+	}
+}
+.ad-jian-list {
+	.list-item {
+		position: relative;
+		height: 90px;
+		margin: 8px 8px 0;
+		> a {
+			display: block;
+			height: 100%;
+			padding-right: 108px;
+			background: url("../img/jian.png") no-repeat left top @white;
+			background-size: 30px auto;
+			&:hover,
+			&:active {
+				background-color: #f5f5f5;
+			}
+		}
+		span,em {
+			display: block;
+			padding-left: 16px;
+			.text-overflow();
+		}
+		span {
+			padding-top: 30px;
+			font-size: 15px;
+		}
+		em {
+			margin-top: 5px;
+			font-size: 12px;
+			color: #9b9b9b;
+			b {
+				font-size: 15px;
+			}
+		}
+		img {
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			display: block;
+			width: 100px;
+			height: 74px;
+			margin-top: -37px;
+		}
+	}
+}
+.ad-txt-list {
+	.clearfix;
+	margin-top: 0.5rem;
+	padding: 0 0.05rem;
+	a {
+		position: relative;
+		float: left;
+		display: block;
+		width: 7.55rem;
+		height: 2.7rem;
+		margin-left: 0.3rem;
+		padding: 0.4rem;
+		border-radius: 6px;
+		.text {
+			font-size: 16px;
+		}
+		.intro {
+			margin-top: 0.4rem;
+			font-size: 13px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0.2rem;
+			right: 0.2rem;
+			display: inline-block;
+			width: 1.2rem;
+			height: 1.2rem;
+			line-height: 1;
+			background: url("../img/sprite.png") no-repeat;
+			background-size: 4.8rem auto;
+			overflow: hidden;
+		}
+		&:first-child {
+			background-color: #fed957;
+			color: #936e00;
+			&:after {
+				background-position: -2.4rem -8.4rem;
+			}
+		}
+		&:last-child {
+			background-color: #97ddff;
+			color: #2c7294;
+			&:after {
+				background-position: -3.6rem -8.4rem;
+			}
+		}
+	}
+}
+
+/* ������ */
+.ad-item {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: @border-default;
+	border-bottom: @border-default;
+	background-color: @white;
+	.ad-footer {
+		position: relative;
+		padding: 10px;
+		text-align: right;
+		input {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			opacity: 0;
+		}
+		span {
+			position: relative;
+			z-index: 2;
+			cursor: pointer;
+			i {
+				vertical-align: middle;
+			}
+			color: @gray-dark;
+			font-size: 14px;
+		}
+	}
+}

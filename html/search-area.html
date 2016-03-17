@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>大集到家-搜索地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="大集到家">
+    <meta name="description" content="大集到家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.05*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+    <link type="text/css" rel="stylesheet" href="../assets/css/djdj.min.css">
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header" dj-bg="white" dj-header="bor" dj-search="inner">
+    <a href="#" class="header-left btn btn-link" dj-direct="down">海口市</a>
+    <div class="form-search-wrap">
+        <span class="icn-search"></span>
+        <input type="text" placeholder="搜索附近的商品或商店">
+    </div>
+    <div class="header-dropdown">
+        <a href="javascript:;" class="header-right btn-menu" data-toggle="dropdown"><i></i></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">搜索</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 搜索地址列表 -->
+            <ul class="area-list">
+                <li>
+                    <h3>小黄埔河桥</h3>
+                    <p>海南省海口市美兰区城区文明东路山内花园5-901</p>
+                </li>
+                <li>
+                    <h3>黄埔军训</h3>
+                    <p>上海市浦东新区华联超市（南滨店）附近</p>
+                </li>
+                <li>
+                    <h3>黄埔新村（村子口眷村）</h3>
+                    <p>上海静安区华山路301号</p>
+                </li>
+                <li>
+                    <h3>小黄埔河桥</h3>
+                    <p>海南省海口市美兰区城区文明东路山内花园5-901</p>
+                </li>
+                <li>
+                    <h3>黄埔军训</h3>
+                    <p>上海市浦东新区华联超市（南滨店）附近</p>
+                </li>
+                <li>
+                    <h3>黄埔新村（村子口眷村）</h3>
+                    <p>上海静安区华山路301号</p>
+                </li>
+            </ul>
+            <!-- // 搜索地址列表 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 回到顶部 -->
+<a href="#" class="gotop"></a>
+<!-- // 回到顶部 -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/DJDJ.js"></script>
+<script>
+    // 右上角菜单栏展开收起
+    $('[data-toggle="dropdown"]').on('click',function(){
+        $(this).parent().toggleClass('open');
+    });
+</script>
+</body>
+</html>

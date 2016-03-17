@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>大集到家-意见反馈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="大集到家">
+    <meta name="description" content="大集到家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.05*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+    <link type="text/css" rel="stylesheet" href="../assets/css/djdj.min.css">
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header" dj-bg="white" dj-header="bor" dj-search="inner">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">意见反馈</h1>
+    <div class="header-dropdown">
+        <a href="javascript:;" class="header-right btn-menu" data-toggle="dropdown"><i></i></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">搜索</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 意见反馈 -->
+            <form name="feedbackForm">
+                <div class="feedback">
+                    <div class="f-title">我们还有很多不足的地方需要改进，您的宝贵意见是我们是不断前进的动力。</div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="输入您的反馈意见"></textarea>
+                    <button type="submit" class="btn btn-danger btn-radius btn-md-1 btn-block">提 交</button>
+                </div>
+            </form>
+            <!-- // 意见反馈 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 回到顶部 -->
+<a href="#" class="gotop"></a>
+<!-- // 回到顶部 -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/DJDJ.js"></script>
+<script>
+    // 右上角菜单栏展开收起
+    $('[data-toggle="dropdown"]').on('click',function(){
+        $(this).parent().toggleClass('open');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.prompt {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding-top: 50px;
+	font-size: 16px;
+	color: #595959;
+	text-align: center;
+	line-height: 1.2;
+	background-color: @white;
+	z-index: 9999;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 34px;
+		background: url("../img/state.png") no-repeat;
+		background-size: 34px auto;
+	}
+	&.prompt-success {
+		&:before {
+			background-position: center 0;
+		}
+	}
+	&.prompt-fail {
+		&:before {
+			background-position: center -34px;
+		}
+	}
+}

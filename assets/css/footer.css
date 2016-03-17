@@ -1,0 +1,29 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+}
+.footer ~ #wrapper .content {
+  padding-bottom: 45px;
+}
+.footer .btn {
+  margin-right: 9px;
+  margin-top: 7px;
+}
+.footer .gocart {
+  position: absolute;
+  left: 21px;
+  top: -11px;
+  width: 45px;
+  height: 45px;
+  background-color: #333;
+  background-size: 21px auto;
+}
+.footer .gocart span {
+  width: 18px;
+  height: 18px;
+}

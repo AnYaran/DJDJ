@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>大集到家-商家首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="大集到家">
+    <meta name="description" content="大集到家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.05*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+    <link type="text/css" rel="stylesheet" href="../assets/css/djdj.min.css">
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header" dj-bg="white" dj-header="bor" dj-search="inner">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <div class="form-search-wrap">
+        <span class="icn-search"></span>
+        <input type="text" placeholder="搜索附近的商品或商店">
+    </div>
+    <div class="header-dropdown">
+        <a href="javascript:;" class="header-right btn-menu" data-toggle="dropdown"><i></i></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">搜索</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 轮播图 -->
+            <section class="swiper-container swiper-1 mt0">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide">
+                        <img data-src="../assets/upload/swiper_01.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img data-src="../assets/upload/swiper_01.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img data-src="../assets/upload/swiper_01.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </section>
+            <!-- // 轮播图 -->
+            <!-- 商家信息 -->
+            <ul class="shop-list">
+                <li class="list-item">
+                    <div class="list-body">
+                        <div class="pic-wrap">
+                            <span class="icn-baihuo"></span>
+                            <div class="pic" style="background-image: url(../assets/upload/logo_ms.png)"></div>
+                        </div>
+                        <div class="main-info">
+                            <h3>西安民生百货</h3>
+                            <p class="mt5">陕西省西安市解放路103号</p>
+                            <p class="time"><span class="icn-clock"></span> 营业时间 09:00 - 20:00</p>
+                        </div>
+                        <a href="#" class="btn btn-danger btn-radius-sm">全部商品</a>
+                    </div>
+                    <p class="note">满100减10元；满60减5元</p>
+                </li>
+            </ul>
+            <!-- // 商家信息 -->
+            <!-- 分类商品 -->
+            <div class="index-cm-title">
+                <a href="#" class="pull-right">更多></a>
+                <h3>粮油副品</h3>
+            </div>
+            <ul class="product-list">
+                <li id="A0081800000008103" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_01.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A0081800000008104" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_02.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A0081800000008105" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_02.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A0081800000008106" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_03.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="index-cm-title">
+                <a href="#" class="pull-right">更多></a>
+                <h3>蛋禽肉品</h3>
+            </div>
+            <ul class="product-list">
+                <li id="A0081800000008107" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_01.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A0081800000008108" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_02.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A0081800000008109" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_02.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+                <li id="A00818000000081010" class="list-item">
+                    <a href="#">
+                        <div class="pic lazy" data-src="../assets/upload/product_03.jpg"></div>
+                        <h3>国产有机蓝蓝莓鲜果/保护3盒</h3>
+                        <span class="price">¥57.8</span>
+                        <div class="cart-opt">
+                            <span class="icn-minus-white" onclick="$.listCart._reduceCart();"></span>
+                            <span class="J_addNum cart-num">0</span>
+                            <span class="icn-plus" onclick="$.listCart._addCart();"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 回到顶部 -->
+<a href="#" class="gotop"></a>
+<!-- // 回到顶部 -->
+<!-- 购物车 -->
+<a href="#" id="cart" class="gocart"><span></span></a>
+<!-- // 购物车 -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery.fly.min.js"></script>
+<script src="../assets/js/jquery.lazyload.min.js"></script>
+<script src="../assets/js/DJDJ.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-1', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true,
+        loop: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+    // 普通图片延迟加载
+    $(".lazy").lazyload({
+        threshold: 200,
+        data_attribute  : "src",
+        placeholder: "../assets/img/ji.png",
+        effect: "fadeIn"
+    });
+
+    var Cart_Offset = $("#cart").offset();  //结束的地方的元素
+    (function($){
+        $.listCart = {
+            _addCart: function(e){
+                var ev = e || window.event
+                        ,_target = ev.target
+                        ,$this = $(_target)
+                        ,$cartOptWrap = $this.parent()
+                        ,$J_addNum = $cartOptWrap.find('.J_addNum')
+                        ,$parentLi = $this.parents('li')
+                        ,$currentNum =  parseInt($J_addNum.html())
+                        ,backgroundImage = $parentLi.find('.pic').css('backgroundImage')
+                        ,imgSrc = backgroundImage.slice(5,backgroundImage.length-2)
+                        ,flyer = $('<img class="u-flyer" src="'+imgSrc+'">');
+                $cartOptWrap.addClass('active');
+                $J_addNum.html($currentNum+1);
+                var cartData = {};
+                cartData.id = $parentLi.attr('id');
+                flyer.fly({
+                    start: {
+                        left: event.pageX,
+                        top: event.pageY
+                    },
+                    end: {
+                        left: Cart_Offset.left+10,
+                        top: Cart_Offset.top+10,
+                        width: 0,
+                        height: 0
+                    },
+                    onEnd: function(){
+                        showToast("success","成功加入购物车");
+                        this.destory();
+                        console.log(cartData);
+                    }
+                });
+            },
+            _reduceCart: function(e){
+                var ev = e || window.event
+                        ,_target = ev.target
+                        ,$this = $(_target)
+                        ,$cartOptWrap = $this.parent()
+                        ,$J_addNum = $cartOptWrap.find('.J_addNum')
+                        ,$parentLi = $this.parents('li')
+                        ,$currentNum =  parseInt($J_addNum.html());
+                var cartData = {};
+                cartData.id = $parentLi.attr('id');
+                if ($currentNum == 1) {
+                    $cartOptWrap.removeClass('active');
+                    $J_addNum.html(0);
+                } else {
+                    $J_addNum.html($currentNum-1);
+                }
+                console.log(cartData);
+            }
+        }
+    }(jQuery));
+
+    // 右上角菜单栏展开收起
+    $('[data-toggle="dropdown"]').on('click',function(){
+        $(this).parent().toggleClass('open');
+    });
+</script>
+</body>
+</html>

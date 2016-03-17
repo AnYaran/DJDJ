@@ -1,0 +1,88 @@
+/* 优惠券 */
+.coupon-list {
+  list-style: none;
+  margin: 0 10px;
+  .coupon-item {
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #fc7d85;
+    overflow: hidden;
+    .c-top {
+      .clearfix();
+      position: relative;
+      padding-bottom: 10px;
+      border: 2px solid #fc7d85;
+      border-bottom: 0;
+      color: @white;
+      .c-price {
+        float: left;
+        width: 37.5%;
+        margin-top: 8px;
+        padding-left: 15px;
+        font-size: 36px;
+        small {
+          font-size: 12px;
+        }
+      }
+      .c-detail {
+        position: relative;
+        padding-top: 4px;
+        font-size: 13px;
+        z-index: 2;
+        p {
+          line-height: 22px;
+          .text-overflow();
+        }
+      }
+    }
+    .c-time {
+      position: relative;
+      border: 2px solid #fff;
+      text-align: center;
+      color: @gray;
+      font-size: @font-size-small;
+      line-height: 26px;
+      background-color: @white;
+      z-index: 2;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -2px;
+        right: -2px;
+        height: 8px;
+        background: url("../img/coupon_dots.png") repeat-x 2px;
+        background-size: 16px 8px;
+      }
+    }
+    &.invalid,
+    &.selected {
+      background-color: #c1c1c1;
+      .c-top {
+        border-color: #c1c1c1;
+        &:after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          right: 13px;
+          width: 64px;
+          height: 46px;
+          background: url("../img/coupon_invalid.png") no-repeat;
+          background-size: 64px 46px;
+          z-index: 2;
+        }
+      }
+    }
+    &.selected {
+      background-color: #ff5661;
+      .c-top {
+        border-color: #ff5661;
+        &:after {
+          background: url("../img/coupon_selected.png") no-repeat;
+          background-size: 64px 46px;
+        }
+      }
+    }
+  }
+}

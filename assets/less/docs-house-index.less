@@ -1,0 +1,54 @@
+.fruits-list {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: @white;
+	a {
+		.clearfix;
+		display: block;
+		margin: 0 10px;
+		padding: 10px 0;
+		border-bottom: @border-default;
+		&:last-child {
+			border-bottom: 0;
+		}
+		&:hover,
+		&:active {
+			background-color: #f5f5f5;
+		}
+	}
+	.pic {
+		float: left;
+		width: 5.35rem;
+		height: 3.95rem;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 4px;
+	}
+	.main-info {
+		margin-left: 5.75rem;
+		text-align: left;
+		.text {
+			font-size: 17px;
+			color: @gray-darker;
+			line-height: 1;
+			.text-overflow();
+		}
+		.intro {
+			height: 38px;
+			margin-top: 6px;
+			font-size: @font-size-base;
+			color: @gray;
+			line-height: 19px;
+			.multi-text-overflow();
+		}
+		.price {
+			margin-top: 11px;
+			font-size: 17px;
+			color: @orange;
+			line-height: 1;
+		}
+	}
+}

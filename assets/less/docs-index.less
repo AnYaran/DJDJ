@@ -1,0 +1,391 @@
+/*-------------------------
+  首页样式
+---------------------------*/
+/* 商品分类 */
+.category {
+	padding-bottom: 15px;
+	background-color: @white;
+	ul {
+		li {
+			float: left;
+			margin-top: 15px;
+			width: 25%;
+			a {
+				display: block;
+				text-align: center;
+				span {
+					display: block;
+					width: 2.1rem;
+					height: 2.1rem;
+					margin: 0 auto;
+					background-repeat: no-repeat;
+					background-size: contain;
+					overflow: hidden;
+				}
+				&[data-cat="fruit"] {
+					span {
+						background-image: url("../img/icn_fruit.png");
+					}
+				}
+				&[data-cat="cereals"] {
+					span {
+						background-image: url("../img/icn_cereals.png");
+					}
+				}
+				&[data-cat="artware"] {
+					span {
+						background-image: url("../img/icn_artware.png");
+					}
+				}
+				&[data-cat="medicine"] {
+					span {
+						background-image: url("../img/icn_medicine.png");
+					}
+				}
+				&[data-cat="specialty"] {
+					span {
+						background-image: url("../img/icn_specialty.png");
+					}
+				}
+				&[data-cat="tea"] {
+					span {
+						background-image: url("../img/icn_tea.png");
+					}
+				}
+				&[data-cat="spice"] {
+					span {
+						background-image: url("../img/icn_spice.png");
+					}
+				}
+				&[data-cat="venison"] {
+					span {
+						background-image: url("../img/icn_venison.png");
+					}
+				}
+				strong {
+					display: block;
+					margin-top: 5px;
+					font-weight: normal;
+					font-size: @font-size-base;
+					color: @gray-dark;
+					line-height: 1;
+					.text-overflow();
+				}
+			}
+		}
+	}
+}
+
+/* 标题 */
+.index-headline {
+	position: relative;
+	height: 47px;
+	padding-top: 15px;
+	background-color: @white;
+	text-align: center;
+	&:before {
+		position: absolute;
+		top: 36px;
+		left: 0;
+		display: block;
+		content: "";
+		width: 100%;
+		border-top-style: solid;
+		border-top-width: 1px;
+	}
+	strong {
+		position: relative;
+		display: block;
+		width: 96px;
+		height: 32px;
+		margin: 0 auto;
+		text-indent: -9999px;
+		font-size: 0;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 96px auto;
+		z-index: 2;
+	}
+	&[data-hl="season"] {
+		strong {
+			background-image: url("../img/hl_bg_season.png");
+		}
+		&:before {
+			border-top-color: @purple;
+		}
+	}
+	&[data-hl="recommend"] {
+		strong {
+			background-image: url("../img/hl_bg_recommend.png");
+		}
+		&:before {
+			border-top-color: @orange;
+		}
+	}
+}
+
+/* 当季特产 */
+.season-wrapper {
+	padding-bottom: 10px;
+	background-color: @white;
+	.btn {
+		margin: 0 0.4rem;
+	}
+}
+.season-list {
+	.clearfix;
+	padding: 10px 0.2rem;
+	a {
+		position: relative;
+		display: block;
+		float: left;
+		width: 4.8rem;
+		margin: 0 0.2rem;
+		border-radius: 8px;
+		border: @border-default;
+		overflow: hidden;
+		&:hover,
+		&:active {
+			border-color: @purple;
+		}
+		span {
+			display: block;
+			height: 3.55rem;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		strong {
+			display: block;
+			padding: 0.3rem;
+			color: @gray-dark;
+			font-size: 15px;
+			font-weight: normal;
+			line-height: 1;
+			background-color: @white;
+			text-align: center;
+			.text-overflow();
+		}
+	}
+}
+
+/* 特优推荐 */
+.recommend-wrapper {
+	padding-bottom: 12px;
+	background-color: @white;
+	overflow: hidden;
+	.media-item {
+		padding: 10px 0.4rem;
+		.pic {
+			float: left;
+			width: 7.35rem;
+			height: 5.3rem;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+		.main-info {
+			position: relative;
+			height: 5.3rem;
+			margin-left: 7.75rem;
+			text-align: left;
+			overflow: hidden;
+			.text {
+				font-size: 17px;
+				.text-overflow();
+				a {
+					color: @gray-dark;
+				}
+			}
+			.intro {
+				height: 38px;
+				margin-top: 5px;
+				font-size: @font-size-base;
+				color: @gray;
+				line-height: 19px;
+				.multi-text-overflow();
+			}
+			.price {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				padding-right: 80px;
+				color: @orange;
+				font-size: 17px;
+				line-height: 30px;
+				.text-overflow();
+			}
+			.btn {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
+
+/*-----------------------------------
+  每日特惠
+-------------------------------------*/
+.ad-three-list {
+	.clearfix();
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	background-color: @white;
+	a {
+		display: block;
+	}
+	.intro {
+		font-size: 12px;
+		color: @gray;
+	}
+	.list-left {
+		width: 38%;
+		border-right: 1px solid #e0e0e0;
+		text-align: center;
+		> a {
+			padding-top: 16px;
+			padding-bottom: 12px;
+		}
+		.pic {
+			width: 44px;
+			height: 44px;
+			margin: 0 auto 15px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		.text {
+			margin: 0;
+			font-size: 18px;
+			color: #f02b2a;
+			.text-overflow();
+		}
+		.intro {
+			margin-top: 8px;
+			.text-overflow();
+		}
+	}
+	.list-right {
+		width: 62%;
+		> a {
+			.clearfix();
+			padding: 6px 20px;
+		}
+		.pic {
+			float: left;
+			width: 60px;
+			height: 50px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		.main-info {
+			margin-left: 86px;
+		}
+		.text {
+			margin-top: 10px;
+			font-size: 13px;
+			color: #212121;
+			.text-overflow();
+		}
+		.intro {
+			margin-top: 5px;
+			.text-overflow();
+		}
+		a:last-child {
+			border-top: 1px solid #e0e0e0;
+		}
+	}
+}
+/*---------------------------------
+  通用标题
+-----------------------------------*/
+.index-cm-title {
+	.clearfix();
+	padding: 10px 8px;
+	font-size: 12px;
+	line-height: 21px;
+	h3 {
+		float: left;
+		color: @gray-darker;
+		font-weight: normal;
+	}
+	a.pull-right {
+		color: @gray;
+	}
+}
+.product-list +.index-cm-title {
+	padding-top: 0;
+}
+/*-----------------------------
+  景点轮播
+-------------------------------*/
+.sc-content{
+	width: 100%;
+	padding-bottom: 10px;
+	background-color: @white;
+	overflow: hidden;
+	.sc-box{
+		width:100%;
+		margin: 10px 10px 20px;
+		.pic-l{
+			float: left;
+			img{
+				width: 9.75rem;
+				height: 6.95rem;
+			}
+		}
+		.pic-r{
+			float: right;
+			img{
+				width: 5rem;
+				height: 3.35rem;
+				display: block;
+				&:last-child{
+					margin-top: 0.25rem;
+				}
+			}
+		}
+	}
+	.sc-intro{
+		p:first-child{
+			font-size: 16px;
+			color: @gray-darker;
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 0;
+			.text-overflow();
+		}
+		p:last-child{
+			margin-top: 6px;
+			margin-bottom: 0;
+			font-size: 14px;
+			color: @gray-dark;
+			text-align: left;
+			line-height: 19px;
+			word-break: break-all;
+		}
+	}
+}
+
+.headline {
+	margin-top: 8px;
+	padding: 14px 8px;
+	font-size: 12px;
+	background-color: @white;
+	border-bottom: @border-default;
+	a {
+		float: right;
+		color: @gray-light;
+	}
+}
+
+
+
+.title-divider {
+	color: @gray;
+	text-align: center;
+	font-size: 12px;
+	line-height: 38px;
+}

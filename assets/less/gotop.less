@@ -1,0 +1,42 @@
+.gotop,
+.gocart {
+	display: none;
+	position: fixed;
+	right: 15px;
+	bottom: 60px;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background: url("../img/gotop.png") no-repeat;
+	background-size: 100% auto;
+	z-index: 9999;
+	&.active {
+		display: block;
+		opacity: .9;
+		&:hover,
+		&:active {
+			opacity: 1;
+		}
+	}
+}
+
+.gocart {
+	display: block;
+	right: auto;
+	left: 15px;
+	background-color: rgba(0,0,0,.6);
+	background-image: url("../img/cart_white.png");
+	background-size: 1rem auto;
+	background-position: center center;
+	border-radius: 50%;
+	span {
+		position: absolute;
+		right: 0;
+		top: 0.25rem;
+		display: block;
+		width: 0.5625rem;
+		height: 0.5625rem;
+		background-color: @pink-light;
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,205 @@
+/*-------------------------------
+  筛选
+---------------------------------*/
+.filter-bar-container {
+	position: absolute;
+	top: 45px;
+	left: 0;
+	right: 0;
+	height: 35px;
+	background-color: @white;
+	z-index: 998;
+	.filter-bar {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			position: relative;
+			display: block;
+			flex: 1;
+			color: @gray-dark;
+			font-size: 13px;
+			line-height: 35px;
+			text-align: center;
+			border-right: @border-default;
+			.text-overflow();
+			&:last-child {
+				border-right: 0;
+			}
+			&.active {
+				color: @red-light;
+			}
+			&[data-icn="list"] {
+				&:before {
+					content: "";
+					display: inline-block;
+					width: 12px;
+					height: 9px;
+					margin-right: 10px;
+					background: url("../img/icn_list.png") no-repeat;
+					background-size: 100% auto;
+				}
+				&.active {
+					&:before {
+						background-image: url("../img/icn_list_active.png");
+					}
+				}
+			}
+			&[data-icn="sort"] {
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 8px;
+					height: 11px;
+					margin-left: 5px;
+					background: url("../img/icn_sort.png") no-repeat;
+					background-size: 100% auto;
+				}
+				&.active {
+					&:after {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+.droplist {
+	display: none;
+	margin: 0;
+	padding: 0 10px 0 8px;
+	list-style: none;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	right: 0;
+	background-color: @white;
+	&.droplist-expand {
+		display: block;
+	}
+	li {
+		position: relative;
+		line-height: 44px;
+		font-size: 14px;
+		color: @gray-dark;
+		border-bottom: 1px solid #ebebeb;
+		&:last-child {
+			border-bottom: none;
+		}
+		&.active {
+			color: @green;
+			&:after {
+				content: "";
+				position: absolute;
+				right: 15px;
+				top: 10px;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url("../img/sprite.png") no-repeat;
+				background-size: 96px auto;
+				background-position: -48px -72px;
+			}
+		}
+	}
+}
+
+.droplist-mask {
+	position: absolute;
+	top: 80px;
+	bottom: 45px;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.4);
+	z-index: 997;
+}
+
+.filter-body {
+	display: none;
+	position: absolute;
+	top: 35px;
+	width: 100%;
+	background-color: #eee;
+	z-index: 11;
+	.body-part {
+		height: 320px;
+		.main-block {
+			float: left;
+			width: 50%;
+			height: 320px;
+			top: 0;
+			background-color: @white;
+			overflow: hidden;
+			.option-list .option.active {
+				background-color: #efefef;
+			}
+		}
+		.side-block {
+			float: left;
+			width: 50%;
+			height: 320px;
+			top: 0;
+			left: 50%;
+			background-color: #eee;
+			overflow: hidden;
+			.option-list .option {
+				height: 33px;
+				padding: 10px 10px 10px 20px;
+			}
+			.option-list .option.active {
+				background-color: #dfdfdf;
+			}
+		}
+	}
+	.option-list {
+		.option {
+			position: relative;
+			width: 100%;
+			height: 40px;
+			padding: 12px;
+			font-size: 13px;
+			color: @gray-darker;
+			border-bottom: 1px solid #dedede;
+			&.cate-0 .option-count{
+				display: none;
+			}
+			.option-count {
+				position: absolute;
+				right: 8px;
+				padding-right: 10px;
+			}
+			&.has-more {
+				.option-count {
+					padding-right: 0;
+				}
+				.option-count:after {
+					content: '';
+					display: inline-block;
+					box-sizing: border-box;
+					margin-left: 4px;
+					margin-bottom: 1px;
+					width: 6px;
+					height: 6px;
+					border-top: 1px solid #cbcbcb;
+					border-right: 1px solid #cbcbcb;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	.filter-footer {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 22px;
+		border-bottom: @border-default;
+		border-top: @border-default;
+		background: url("../img/points.png") no-repeat center 50% @white;
+		background-size: 18px auto;
+	}
+}

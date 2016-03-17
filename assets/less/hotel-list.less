@@ -1,0 +1,40 @@
+.hotel-list {
+	.clearfix();
+	margin-top: 10px;
+	padding: 0.25rem;
+	background-color: @white;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	a {
+		display: block;
+		float: left;
+		margin: 0.25rem;
+	}
+	.pic {
+		width: 7.25rem;
+		height: 5.15rem;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.main-info {
+		padding: 10px;
+		border: 1px solid #e0e0e0;
+	}
+	.txt {
+		color: @gray-darker;
+		font-size: 15px;
+		line-height: 1;
+		.text-overflow();
+	}
+	.price {
+		margin-top: 10px;
+		font-size: 15px;
+		color: @red;
+		line-height: 1;
+		small {
+			font-size: 13px;
+			color: @gray;
+		}
+	}
+}

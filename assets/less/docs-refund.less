@@ -1,0 +1,117 @@
+/* 服务选择 */
+.server-list {
+    padding: 5px 0;
+    .server-item {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 15px 20px;
+        border-top: @border-default;
+        border-bottom: @border-default;
+        background: url("../img/arrow_right.png") no-repeat right 15px center @white;
+        background-size: 12px auto;
+        &:hover,
+        &:active {
+            background-color: #fafafa;
+        }
+    }
+    .refund-icon-1,
+    .refund-icon-2 {
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background: url("../img/refund_icon.png") no-repeat;
+        background-size: 27px auto;
+        overflow: hidden;
+        vertical-align: top;
+    }
+    .refund-icon-2 {
+        background-position: 0 -27px;
+    }
+    .server-txt {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 20px;
+        line-height: 27px;
+        color: @gray-darker;
+        vertical-align: top;
+    }
+    .server-brief {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: @gray;
+    }
+}
+
+/* 退款详情 */
+.refund-top {
+    padding: 15px 10px;
+    background-color: @white;
+    border-bottom: @border-default;
+    .refund-state {
+        height: 24px;
+        padding-left: 33px;
+        font-size: 20px;
+        line-height: 24px;
+        color: @gray-darker;
+        background: url("../img/refund_state_icon.png") no-repeat left center;
+        background-size: 24px auto;
+        overflow: hidden;
+        &[mode="success"] {
+            background-position: 0 0;
+        }
+        &[mode="fail"] {
+            background-position: 0 -24px;
+        }
+        &[mode="waiting"] {
+            background-position: 0 -48px;
+        }
+        &[mode="agree"] {
+            background-position: 0 -72px;
+        }
+        &[mode="ok"] {
+            background-position: 0 -96px;
+        }
+    }
+    .refund-meta,
+    .refund-extra {
+        margin-top: 15px;
+        font-size: 14px;
+        color: @gray;
+        line-height: 18px;
+        label {
+            color: @gray-darker;
+        }
+    }
+    .refund-extra {
+        padding-left: 34px;
+    }
+    .refund-form {
+        padding-right: 44px;
+        .input-group {
+            display: flex;
+            margin-top: 15px;
+        }
+        label {
+            color: @gray-dark;
+            line-height: 40px;
+        }
+        input {
+            flex: 1;
+            padding: 9px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            line-height: 20px;
+            color: @gray-darker;
+            border: @border-default;
+            border-radius: 4px;
+            &::-webkit-input-placeholder {
+                color: @gray;
+            }
+        }
+        .form-actions {
+            margin-top: 15px;
+            text-align: right;
+        }
+    }
+}

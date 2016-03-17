@@ -1,0 +1,44 @@
+/* 选择地址列表 */
+.addr-list {
+    border-bottom: @border-default;
+    background-color: @white;
+    .addr-item {
+        position: relative;
+        padding: 15px 0;
+        border-top: @border-default;
+        h3,p {
+            margin: 0;
+        }
+        h3 {
+            font-weight: normal;
+            font-size: 15px;
+        }
+        p {
+            margin-top: 5px;
+            color: @gray;
+            line-height: 1.5;
+            word-break: break-all;
+        }
+        .icheck {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -18px;
+        }
+        .addr-edit {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            bottom: 15px;
+            width: 44px;
+            border-left: @border-default;
+            background: url("../img/icn_edit.png") center center no-repeat;
+            background-size: 21px auto;
+        }
+        .addr-body {
+            margin-left: 40px;
+            margin-right: 44px;
+        }
+    }
+}

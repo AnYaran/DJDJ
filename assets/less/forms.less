@@ -1,0 +1,865 @@
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+	outline: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: @gray;
+}
+select {
+	-webkit-appearance: none;
+	background: url("../img/arrow_down.png") no-repeat right 10px center;
+	background-size: 13px auto;
+}
+/*------------------------------
+  首页搜索栏
+--------------------------------*/
+.form-search-wrapper {
+	display: flex;
+	padding: 15px 15px 0;
+	background-color: @white;
+}
+.form-search {
+	position: relative;
+	flex: 1;
+	border-radius: 23px;
+	background-color: #f5f5f5;
+	border: @border-default;
+	overflow: hidden;
+	> span {
+		position: absolute;
+		left: 0;
+		top: 6px;
+		width: 40px;
+		text-align: center;
+	}
+	.input-search{
+		display: block;
+		width: 100%;
+		padding: 8px 10px 8px 40px;
+		border: 1px solid transparent;
+		background-color: transparent;
+	}
+}
+
+/* 店铺订单搜索 */
+.form-search-wrapper[mode="white"] {
+	padding: 15px;
+	background-color: #f5f5f5;
+	.form-search {
+		padding-right: 52px;
+		background-color: @white;
+		.search-btn {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			height: inherit;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 10px;
+				bottom: 10px;
+				width: 1px;
+				height: auto;
+				border-left: @border-default;
+			}
+		}
+		input[type=submit] {
+			width: 52px;
+			height: 100%;
+			border: 0;
+			background-color: @white;
+			font-size: 14px;
+			color: @gray-dark;
+			text-align: center;
+		}
+	}
+}
+
+/* 店铺首页搜索 */
+.form-search-wrapper[mode="30"] {
+	padding: 8px 10px;
+	.form-search > span {
+		top: 3px !important;
+	}
+	.input-search{
+		padding: 3px 10px 4px 40px;
+	}
+	.btn {
+		margin-left: 10px;
+	}
+	.btn + .btn {
+		margin-left: 5px;
+	}
+}
+
+/*-------------------------------
+  ԤԼ���� -- ����
+---------------------------------*/
+.form-demmand {
+	position: relative;
+	margin: 20px;
+	.control {
+		margin-bottom: 10px;
+	}
+	label {
+		float: left;
+		display: block;
+		width: 37px;
+		height: 31px;
+		border: 1px solid #e6e6e6;
+		border-right: 0;
+		background-color: #f5f5f5;
+		text-align: center;
+		i {
+			margin-top: 3px;
+		}
+		& +.input-control {
+			margin-left: 37px;
+		}
+	}
+	.input-txt{
+		width: 100%;
+		padding: 4px 10px;
+		border: 1px solid #e6e6e6;
+		font-size: 14px;
+		line-height: 21px;
+		&:focus {
+			border-color: @blue;
+		}
+	}
+	textarea.input-txt {
+		width: 100%;
+		height: 65px;
+	}
+}
+
+/*-----------------------------
+  注册登录表单
+-------------------------------*/
+.form-horizontal {
+	.input-txt {
+		width: 100%;
+		padding: 12px 10px;
+		border: 0;
+		font-size: 15px;
+	}
+	select.input-txt {
+		-webkit-appearance: none;
+	}
+	.with-arrow {
+		position: relative;
+		&:after {
+			position: absolute;
+			right: 14px;
+			top: 19px;
+			content: "";
+			width: 14px;
+			height: 8px;
+			border-style: solid;
+			border-color: #bebebe transparent transparent;
+			border-width: 8px 7px 0;
+		}
+		&:before {
+			position: absolute;
+			right: 40px;
+			top: 0;
+			bottom: 0;
+			content: "";
+			width: 1px;
+			height: auto;
+			border-left: 1px solid #eeeeee;
+
+		}
+	}
+	.btn-getcode ~ .input-txt {
+		float: left;
+		width: 50%;
+	}
+	.btn-getcode.pull-right {
+		margin-top: 7px;
+		margin-right: 6px;
+		padding: 4px 12px;
+		font-size: 15px;
+		line-height: 20px;
+		color: @white;
+		border: 1px solid @green;
+		border-radius: 2px;
+		background-color: @green;
+		&:disabled {
+			background-color: @gray;
+			border-color: @gray;
+			&:hover,
+			&:active {
+				background-color: @gray;
+				border-color: @gray;
+			}
+		}
+		&:hover,
+		&:active {
+			background-color: darken(@green,10%);
+			border-color: darken(@green,10%);
+		}
+	}
+	.form-group {
+		.clearfix();
+		background-color: @white;
+		border: @border-default;
+		border-radius: 4px;
+		overflow: hidden;
+		&+.form-group {
+			margin-top: 15px;
+		}
+	}
+	.control-label {
+		position: relative;
+		float: left;
+		display: block;
+		width: 44px;
+		height: 43px;
+		&:after {
+			position: absolute;
+			right: 0;
+			top: 12px;
+			bottom: 12px;
+			content: "";
+			width: 1px;
+			height: auto;
+			border-left: @border-default;
+		}
+		i {
+			display: block;
+			margin: 11px auto 0;
+		}
+	}
+	.controls {
+		margin-left: 44px;
+	}
+	.form-links {
+		margin-top: 0.5rem;
+		padding-right: 1rem;
+		font-size: 12px;
+		text-align: right;
+		a {
+			color: #09abc0;
+		}
+	}
+	.form-icheck {
+		margin-top: 15px;
+		font-size: 13px;
+		color: @gray-dark;
+		a {
+			color: @gray-dark;
+		}
+		.input-check {
+			width: 13px;
+			height: 13px;
+			margin-right: 5px;
+			-webkit-appearance: none;
+			border: @border-default;
+			background-color: @white;
+			border-radius: 2px;
+			vertical-align: top;
+			&:checked {
+				background: url("../img/checked.png") no-repeat;
+				background-size: 100% auto;
+			}
+		}
+		&+ .form-actions {
+			margin-top: 40px;
+		}
+	}
+	.form-actions {
+		margin: 30px 0;
+	}
+}
+
+/*-----------------------
+  �޸������
+-------------------------*/
+.form-change-pwd {
+	margin: 0.375rem 0;
+	border-top: 0;
+	.form-group {
+		position: relative;
+		margin: 0 0.375rem;
+		border-bottom:0;
+		overflow: hidden;
+		&:after {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: auto;
+			height:1px;
+			bottom: 0;
+			right: 10px;
+			left: 10px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		&:first-child {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+		&:nth-last-child(2) {
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			&:after {
+				border-bottom: 0;
+			}
+		}
+		.control-label {
+			width: 80px;
+			padding: 0 10px;
+			text-align: center;
+			line-height: 41px;
+			border-right: 0;
+		}
+		.controls {
+			margin-left: 80px;
+		}
+	}
+	.btn-groups {
+		.clearfix();
+		display: flex;
+		margin: 1rem 0.25rem 0 !important;
+		.btn {
+			flex: 1;
+			margin: 0 0.125rem;
+		}
+	}
+}
+
+/*------------------------
+ checkbox
+--------------------------*/
+.icheck {
+	display: inline-block;
+	width: 40px;
+	min-height: 36px;
+	-webkit-appearance: none;
+	border: 0;
+	background: url("../img/uncheck.png") no-repeat center center;
+	background-size: 20px auto;
+	&:checked {
+		background-image: url("../img/checked-radius.png");
+	}
+}
+.square-icheck {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	-webkit-appearance: none;
+	border: 0;
+	background: url("../img/square_uncheck.png") no-repeat center center;
+	background-size: 16px auto;
+	vertical-align: top;
+	&:checked {
+		background-image: url("../img/square_checked.png");
+	}
+}
+
+/*------------------------
+  �������� -- �����˻�/�˿�
+--------------------------*/
+.refund-apply-form {
+	margin-top: 10px;
+	.input-group {
+		margin-top: 10px;
+		background-color: #fff;
+	}
+	.input-group input,
+	.input-group textarea {
+		margin-bottom: 0;
+		background-color: transparent;
+		border: 1px solid #e6e6e6;
+	}
+	.input-row {
+		overflow: hidden;
+		padding: 6px 15px 6px 0;
+		border-bottom: 1px solid #e6e6e6;
+	}
+	.input-row label {
+		float: left;
+		width: 35%;
+		padding: 8px 15px;
+		font-size: 15px;
+		line-height: 1;
+		color: @gray-darker;
+	}
+	.input-row input {
+		float: right;
+		width: 65%;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+	.table-view-cell {
+		 padding-right: 40px;
+	}
+	 a.navigate-right {
+		 position: relative;
+		 display: block;
+		 height: 100%;
+		 padding: inherit;
+		 margin: -11px -40px -11px -15px !important;
+		 overflow: hidden;
+		 color: inherit;
+		 &:active {
+			 background-color: #eee;
+		 }
+	}
+	.navigate-right {
+		font-size: 15px;
+		color: @gray-darker;
+		&:after {
+			right: 10px;
+			top: 50% !important;
+			margin-top: -12px !important;
+			background-position: -24px -408px !important;
+		}
+		.badge {
+			float: right;
+			font-size: 15px;
+			color: @gray;
+			background-color: transparent;
+		}
+	}
+	label em,.navigate-right em{
+		display: inline-block;
+		width: 10px;
+		color: #fb3c2e;
+		font-size: 15px;
+		vertical-align: middle;
+		line-height: 1;
+	}
+	.input-group {
+		border-top: 1px solid #dbdbdb;
+		border-bottom: 1px solid #dbdbdb;
+		label {
+			float: left;
+			width: 70px;
+			padding: 0;
+			line-height: 35px;
+		}
+		.input-control {
+			display: block;
+			margin-left: 85px;
+			margin-right: 8px;
+		}
+		input,select,textarea {
+			float: none !important;
+			width: 100%;
+			height: 35px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+			border: none;
+			background-color: transparent;
+			font-size: 15px;
+			line-height: 20px;
+			text-align: right;
+		}
+		.input-important {
+			color: #fb3c2e;
+		}
+		textarea {
+			height: 70px;
+			padding: 0;
+			text-align: left;
+			font-size: 14px;
+		}
+		.input-row {
+			margin: 0 15px;
+			padding: 6px 0;
+			&.last-row {
+				padding: 0 8px 10px 10px;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	.form-actions {
+		display: flex;
+		margin-left: 10px;
+		margin-right: 10px;
+		.btn {
+			flex: 1;
+			margin: 0 5px;
+		}
+	}
+}
+.upload-wrap {
+	padding: 20px;
+	p.tips {
+		margin-top: 10px;
+		font-size: 10px;
+		color: #999;
+	}
+}
+.upload-img-list {
+	.clearfix();
+	margin: 0 0 0 -20px;
+	padding: 0;
+	list-style: none;
+	> ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		position: relative;
+		float: left;
+		margin-left: 20px;
+		.icon-del {
+			position: absolute;
+			right: -10px;
+			top: -10px;
+		}
+		.img {
+			width: 66px;
+			height: 66px;
+			border: 1px solid #dbdbdb;
+			border-radius: 6px;
+			background-color: #ffffff;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			overflow: hidden;
+		}
+	}
+	.add-img-btn {
+		display: block;
+		width: 66px;
+		height: 66px;
+		border: 1px dashed #dbdbdb;
+		background-color: #ffffff;
+		border-radius: 6px;
+		font-size: 11px;
+		color: #757575;
+		text-align: center;
+		.icon-add {
+			margin-top: 10px;
+		}
+		span {
+			display: block;
+			line-height: 1;
+		}
+		.J_UploadInput {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 66px;
+			height: 66px;
+			-webkit-appearance: none;
+			opacity: 0;
+		}
+	}
+}
+
+/* 个人中心-我的信息表单 */
+.uc-form-horizontal {
+	.form-group {
+		margin-top: 20px;
+	}
+	.control-label {
+		float: left;
+		width: 65px;
+		margin-top: 15px;
+		font-size: 15px;
+		color: @gray-dark;
+	}
+	.controls {
+		margin-left: 65px;
+	}
+	input,textarea {
+		width: 100%;
+		padding: 11px 10px;
+		border: @border-default;
+		background-color: #f5f5f5;
+		border-radius: 4px;
+		font-size: 15px;
+		line-height: normal;
+		color: @gray-darker;
+	}
+	.form-actions {
+		margin-top: 30px;
+	}
+	.captcha-wrap {
+		position: relative;
+		.btn {
+			position: absolute;
+			right: 8px;
+			top: 7px;
+		}
+	}
+}
+
+.cm-input-txt {
+	width: 100%;
+	padding: 11px 10px;
+	border: @border-default;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	font-size: 15px;
+	line-height: normal;
+	color: @gray-darker;
+}
+
+/* 新增地址表单 */
+.addr-form-horizontal {
+	padding: 0 10px;
+	border-top: @border-default;
+	border-bottom: @border-default;
+	background-color: @white;
+	.form-group {
+		padding: 11px 0;
+		border-bottom: @border-default;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.control-label {
+		float: left;
+		width: 80px;
+		margin-top: 4px;
+		font-size: 15px;
+	}
+	.controls {
+		position: relative;
+		margin-left: 80px;
+	}
+	input {
+		width: 100%;
+		border: 0;
+		font-size: 15px;
+	}
+	.choose-addr {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: inline-block;
+		width: 44px;
+		height: 20px;
+		border-left: @border-default;
+		background: url("../img/icn_pos.png") no-repeat center center;
+		background-size: 14px auto;
+		& + input {
+			padding-right: 44px;
+		}
+	}
+}
+.set-default {
+	margin: 10px;
+	input {
+		margin-right: 10px;
+	}
+	label {
+		color: @gray;
+	}
+}
+
+/* 退货申请表单 */
+.refund-form-horizontal {
+	margin: 0 10px;
+	.form-group {
+		margin-top: 15px;
+		padding: 10px 0;
+		border: @border-default;
+		background-color: @white;
+		border-radius: 4px;
+	}
+	.control-label {
+		float: left;
+		width: 78px;
+		margin-top: 4px;
+		text-align: right;
+		color: @gray;
+		font-size: 15px;
+		em {
+			font-family: simSun;
+			font-style: normal;
+			color: @red-darkest;
+		}
+	}
+	.input-val {
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.controls {
+		position: relative;
+		margin-left: 97px;
+		.rmb {
+			position: absolute;
+			left: 0;
+			display: block;
+			color: @gray;
+			font-size: 14px;
+			line-height: 22px;
+			& + input {
+				padding-left: 16px;
+			}
+		}
+		input,select {
+			width: 100%;
+			border: 0;
+			font-size: 15px;
+			line-height: normal;
+		}
+	}
+	.help-block {
+		margin-top: 5px;
+		font-size: 13px;
+		color: @gray;
+	}
+	.form-actions {
+		margin-top: 80px;
+	}
+}
+.refund-form-vertical {
+	margin: 0 10px;
+	.form-group {
+		.control-label {
+			display: block;
+			margin: 10px 0;
+			font-size: 15px;
+			em {
+				font-family: simSun;
+				font-style: normal;
+				color: @red-darkest;
+			}
+			.help-inline {
+				font-size: 12px;
+				color: @gray;
+			}
+		}
+		.input-radio {
+			position: relative;
+			border-bottom: @border-default;
+			&:last-child {
+				border-bottom: 0;
+			}
+			input[type=radio] {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				&:checked + label {
+					background: url("../img/icn_ok_sm.png") no-repeat right 10px center;
+					background-size: 12px auto;
+				}
+			}
+			label {
+				display: block;
+				padding: 10px;
+				line-height: 22px;
+			}
+		}
+		.controls {
+			border: @border-default;
+			background-color: @white;
+			border-radius: 4px;
+			overflow: hidden;
+			input,select,textarea {
+				width: 100%;
+				padding: 10px;
+				font-size: 15px;
+				line-height: normal;
+				border: 0;
+			}
+			textarea {
+				height: 88px;
+			}
+		}
+	}
+}
+
+/* 上传图片 */
+.upload-img-wrap {
+	position: relative;
+	padding: 10px;
+	border: 1px dashed #e2e2e2;
+	line-height: 22px;
+	border-radius: 4px;
+	.icn-camera {
+		display: inline-block;
+		width: 20px;
+		height: 16px;
+		margin-top: 3px;
+		background: url("../img/icn_camera.png") no-repeat;
+		background-size: 20px auto;
+	}
+	span.pull-right {
+		color: @gray;
+	}
+	input[type=file] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		opacity: 0;
+	}
+	.preview-list {
+		.clearfix();
+		position: absolute;
+		right: 15px;
+		top: 7px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background-color: #f5f5f5;
+		li {
+			position: relative;
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin-left: 10px;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			.icn-del {
+				position: absolute;
+				right: -6px;
+				top: -6px;
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				background: url("../img/icn_del.png") no-repeat center center;
+				background-size: 13px auto;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+/* 首页搜索栏 */
+.form-search-wrap {
+	.clearfix();
+	margin: 0 8px 8px;
+	border: 1px solid #e3e3e3;
+	background-color: #f6f6f6;
+	border-radius: 4px;
+	overflow: hidden;
+	.icn-search {
+		float: left;
+		width: 30%;
+		height: 29px;
+		background: url("../img/icn_search.png") no-repeat right 50%;
+		background-size: 12px auto;
+	}
+	input {
+		float:left;
+		width: 70%;
+		padding: 6px 8px;
+		font-size: 13px;
+		border: 0;
+		background-color: inherit;
+	}
+	input::-webkit-input-placeholder {
+		color: #b8b8b8;
+	}
+}

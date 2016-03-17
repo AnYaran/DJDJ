@@ -1,0 +1,51 @@
+.tabs {
+	display: flex;
+	background-color: @white;
+	a {
+		position: relative;
+		display: block;
+		flex: 1;
+		border-bottom: 1px solid #f3f3f3;
+		padding: 14px 0;
+		font-size: 18px;
+		color: @gray-dark;
+		text-align: center;
+		&:after {
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+			content: "";
+			width: 100%;
+			height: 2px;
+			border-bottom: 2px solid transparent;
+		}
+		&.active {
+			color: @green;
+			&:after {
+				border-bottom: 2px solid @green;
+			}
+		}
+	}
+}
+.tabs-with-bor {
+	a {
+		font-size: 15px;
+		&:last-child {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 13px;
+				bottom: 13px;
+				width: 1px;
+				height: auto;
+				border-left: @border-default;
+			}
+		}
+	}
+}
+.tabs-container {
+	height: auto;
+	background-color: @white;
+}

@@ -1,0 +1,49 @@
+/* 已开通城市 */
+.scity{
+  .c-titile{
+    position: relative;
+    margin: 0 10px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 40px;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      content: "";
+      width: 100%;
+      height: 0;
+      margin-top: -1px;
+      border-bottom: 1px dashed #d8d8d8;
+    }
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0 6px;
+      background-color: #f0f0f0;
+      z-index: 1;
+      font-size: @font-size-base;
+      color: @gray;
+      vertical-align: top;
+    }
+  }
+  .city-list{
+    .clearfix();
+    li{
+      float: left;
+      width: 4.21875rem;
+      margin-left: .625rem;
+      margin-bottom: 10px;
+      padding: 10px 0;
+      border: 1px solid #d8d8d8;
+      background: @white;
+      color: @gray-darker;
+      font-size: @font-size-base;
+      text-align: center;
+      line-height: 1.4;
+      &.curr {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+}

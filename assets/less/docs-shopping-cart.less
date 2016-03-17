@@ -1,0 +1,233 @@
+/* 购物车 */
+.cart-addr {
+  position: relative;
+  min-height: 60px;
+  padding: 10px 30px 10px 10px;
+  background: url("../img/address_bg.png") left top repeat-x,url("../img/address_bg.png") left bottom repeat-x #fffde1;
+  background-size: 72px 3px;
+  border-top: @border-default;
+  border-bottom: @border-default;
+  font-size: 12px;
+  span {
+    display: inline-block;
+    line-height: 20px;
+    padding: 10px 0;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 19px;
+    right: 10px;
+    background-position: -70px -37px;
+  }
+}
+.shop-cart-icon {
+  background: url(../img/shop_cart_icon.png) no-repeat;
+  background-size: 100px 60px;
+}
+.shop-cart-list {
+  background-color: #eeeef1;
+}
+.shop-cart-item {
+  margin: 10px 0;
+  background-color: @white;
+  .item-header {
+    position: relative;
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 12px;
+    color: #9b9b9b;
+    > a{
+      display: inline-block;
+      max-width: 55%;
+      color: #9b9b9b;
+      height: 39px;
+      margin: 0 0 0 60px;
+      padding: 0 15px 0 0;
+      background: url(../img/arrow_right_sm.png) no-repeat right center;
+      background-size: 5px auto;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .item-body {
+    .item-list {
+      li {
+        position: relative;
+        height: 82px;
+        padding: 10px 0 0 10px;
+        border-bottom: 1px solid #e8e8e8;
+        .shop-cart-icon {
+          top: 20px;
+        }
+      }
+    }
+  }
+}
+.sc-icon-check {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  background-position: -32px 8px;
+  &.uncheck {
+    background-position: 8px 8px;
+  }
+}
+.sc-icon-store {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 9px;
+  left: 39px;
+  background-position: -32px -35px;
+}
+.sc-product-info {
+  position: relative;
+  display: block;
+  height: 60px;
+  margin: 0 0 0 35px;
+  padding: 0 10px 10px 0;
+  img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+  }
+  h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72%;
+    padding-left: 68px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #333;
+    .multi-text-overflow();
+  }
+  span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 24%;
+    color: @red-darker;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: right;
+  }
+}
+.amount-outer {
+  position: absolute;
+  width: 140px;
+  height: 27px;
+  left: 112px;
+  top: 42px;
+  z-index: 1;
+}
+.amount-wrap {
+  position: absolute;
+  width: 95px;
+  height: 27px;
+  top: 0;
+  left: 0;
+  line-height: 27px;
+  border: 1px solid #cecdcd;
+  z-index: 2;
+  background: #fff;
+  border-radius: 2px;
+  vertical-align: top;
+  font-weight: bold;
+  overflow: hidden;
+  i {
+    position: absolute;
+    height: 26px;
+    width: 30px;
+    line-height: 26px;
+    top: 0;
+    z-index: 3;
+    &.amount-minus {
+      left: 0;
+      background: url(../img/decrease.png) no-repeat center;
+      border-right: 1px solid #cecdcd;
+      background-size: 10px 1px;
+    }
+    &.amount-plus {
+      right: 0;
+      background: url(../img/increase.png) no-repeat center;
+      border-left: 1px solid #cecdcd;
+      background-size: 10px 10px;
+    }
+  }
+  em {
+    display: inline-block;
+    width: 100%;
+    height: 26px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    vertical-align: top;
+  }
+  .amount-select {
+    position: absolute;
+    width: 35px;
+    left: 30px;
+    top: -4px;
+    color: #000;
+    z-index: 4;
+    opacity: 0;
+  }
+}
+.sc-del {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/garbage.png") no-repeat;
+  background-size: 20px 20px;
+}
+.item-footer {
+  position: relative;
+  height: 45px;
+  background: #f6f6f6;
+  .sc-subtotal {
+    margin: 0 90px 0 10px;
+    padding: 5px 0;
+    color: #333;
+    > span {
+      display: inline-block;
+      line-height: 35px;
+      font-size: 13px;
+      color: #333;
+      > i {
+        color: @red-darker;
+      }
+      .sc-price {
+        font-size: 15px;
+      }
+      &.yf {
+        font-size: 11px;
+        color: #999;
+      }
+    }
+  }
+  .sc-sure {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 85px;
+    text-align: center;
+    line-height: 45px;
+    height: 45px;
+    font-size: 13px;
+    color: @white;
+    background: #ff5661;
+  }
+}

@@ -1,0 +1,83 @@
+/* 商家列表 */
+.shop-list {
+  background-color: @white;
+  .list-item {
+    > a,>.list-body {
+      position: relative;
+      display: block;
+      min-height: 60px;
+      padding: 10px 8px;
+      &.navigate-right {
+        border-bottom: @border-default;
+      }
+    }
+    > .note {
+      margin: 0 8px;
+      padding: 10px 0;
+      border-top: 1px dashed #e6e6e6;
+      font-size: 12px;
+      color: @red-light;
+    }
+    .icn-baihuo {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 27px;
+      height: 27px;
+      background: url("../img/baihuo.png") no-repeat;
+      background-size: 100% auto;
+      z-index: 2;
+    }
+    .icn-clock {
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      background: url("../img/icn_clock.png") no-repeat;
+      background-size: 11px auto;
+      overflow: hidden;
+      vertical-align: top;
+    }
+    .pic-wrap {
+      position: relative;
+      float: left;
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .pic {
+      width: 50px;
+      height: 50px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .main-info {
+      margin-left: 68px;
+      margin-right: 68px;
+      h3 {
+        color: @gray-darker;
+        font-size: 15px;
+        font-weight: normal;
+        .text-overflow();
+      }
+      p {
+        margin-top: 10px;
+        font-size: 11px;
+        color: @gray;
+        .text-overflow();
+        &.note {
+          color: @red-light;
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      margin-top: -12px;
+    }
+  }
+}

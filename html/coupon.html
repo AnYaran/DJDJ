@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>大集到家-优惠券</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="大集到家">
+    <meta name="description" content="大集到家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.05*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+    <link type="text/css" rel="stylesheet" href="../assets/css/djdj.min.css">
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header" dj-bg="white" dj-header="bor" dj-search="inner">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">优惠券</h1>
+    <div class="header-dropdown">
+        <a href="javascript:;" class="header-right btn-menu" data-toggle="dropdown"><i></i></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">搜索</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 优惠券 -->
+            <ul id="J_CouponList" class="coupon-list">
+                <li class="coupon-item selected">
+                    <div class="c-top">
+                        <div class="c-price">20<small>元</small></div>
+                        <div class="c-detail">
+                            <p>新用户奖励券</p>
+                            <p>满40元使用（限零食类）</p>
+                        </div>
+                    </div>
+                    <div class="c-time">有效期：2015-11-10至2015-11-30</div>
+                </li>
+                <li class="coupon-item">
+                    <div class="c-top">
+                        <div class="c-price">20<small>元</small></div>
+                        <div class="c-detail">
+                            <p>新用户奖励券</p>
+                            <p>满40元使用（限零食类）</p>
+                        </div>
+                    </div>
+                    <div class="c-time">有效期：2015-11-10至2015-11-30</div>
+                </li>
+                <li class="coupon-item invalid">
+                    <div class="c-top">
+                        <div class="c-price">50<small>元</small></div>
+                        <div class="c-detail">
+                            <p>新用户奖励券</p>
+                            <p>满40元使用（限零食类）</p>
+                        </div>
+                    </div>
+                    <div class="c-time">有效期：2015-11-10至2015-11-30</div>
+                </li>
+            </ul>
+            <!-- // 优惠券 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 回到顶部 -->
+<a href="#" class="gotop"></a>
+<!-- // 回到顶部 -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/DJDJ.js"></script>
+<script>
+    // 右上角菜单栏展开收起
+    $('[data-toggle="dropdown"]').on('click',function(){
+        $(this).parent().toggleClass('open');
+    });
+
+    // 选择优惠券
+    $(function(){
+        $("#J_CouponList .coupon-item").not('.invalid').click(function(){
+            var $this = $(this);
+            if($this.hasClass("selected")){
+                $this.removeClass("selected");
+            } else {
+                $this.addClass("selected").siblings().removeClass("selected");
+            }
+        })
+    });
+
+</script>
+</body>
+</html>

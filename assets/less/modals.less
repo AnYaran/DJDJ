@@ -1,0 +1,91 @@
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	-webkit-overflow-scrolling: touch;
+	&.fade .modal-dialog {
+		transform: translate3d(0, -25%, 0);
+		transition: transform 0.3s ease-out;
+	}
+	&.in .modal-dialog { transform: translate3d(0, 0, 0) }
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-dialog {
+	width: 13.5rem;
+	margin: 1.75rem auto 0;
+}
+.modal-content {
+	background-color: @white;
+	border-radius: 6px;
+}
+.modal-header {
+	position: relative;
+	height: 42px;
+	background-color: @blue;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.modal-title {
+	margin: 0;
+	color: @white;
+	font-size: 16px;
+	line-height: 42px;
+	text-align: center;
+	font-weight: normal;
+}
+.close {
+	position: absolute;
+	right: -7px;
+	top: -7px;
+	width: 30px;
+	height: 30px;
+	background-color: @blue;
+	border-radius: 50%;
+	border: 0;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		line-height: 1;
+		background: url("../img/sprite.png") no-repeat;
+		background-size: 96px auto;
+		background-position: -48px -288px;
+		overflow: hidden;
+	}
+	&:hover,
+	&:active {
+		background-color: #179bae;
+	}
+}
+.modal-body {
+	padding: 10px;
+}
+
+// Modal background
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgba(0,0,0,.8);
+	// Fade for backdrop
+	&.fade { opacity:0; }
+	&.in { opacity:1; }
+}

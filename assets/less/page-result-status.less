@@ -1,0 +1,45 @@
+/* 页面结果 */
+.page-result {
+    width: 100%;
+    height: 100%;
+    .page-result-wrap {
+        padding-top: 40%;
+        text-align: center;
+        .page-result-pic {
+            &[mode="page-null"] {
+                width: 92px;
+                height: 104px;
+                margin: 0 auto;
+                background: url("../img/list_null.png") no-repeat;
+                background-size: contain;
+            }
+            &[mode="page-cart-null"] {
+                width: 140px;
+                height: 124px;
+                margin: 0 auto;
+                background: url("../img/cart_null.png") no-repeat;
+                background-size: contain;
+            }
+            &[mode="page-ok"] {
+                width: 54px;
+                height: 40px;
+                margin: 0 auto;
+                background: url("../img/icn_ok.png") no-repeat;
+                background-size: contain;
+            }
+        }
+        .page-result-title {
+            margin-top: 40px;
+            font-size: 18px;
+            color: @gray-dark;
+        }
+        .page-result-brief {
+            margin-top: 15px;
+            font-size: 13px;
+            color: @gray;
+        }
+        .page-result-button {
+            margin-top: 15px;
+        }
+    }
+}

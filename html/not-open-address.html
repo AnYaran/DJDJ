@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>大集到家-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="大集到家">
+    <meta name="description" content="大集到家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.05*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+    <link type="text/css" rel="stylesheet" href="../assets/css/djdj.min.css">
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header" dj-header="search">
+    <div class="header-inner">
+        <a href="#" class="header-left btn btn-link" dj-direct="down">送至：海航大厦</a>
+        <a href="#" class="header-right icn-user"></a>
+    </div>
+    <!-- 搜索 -->
+    <div class="form-search-wrap">
+        <span class="icn-search"></span>
+        <input type="text" placeholder="搜索附近的商品或商店">
+    </div>
+    <!-- // 搜索 -->
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div class="page-result">
+                <div class="page-result-wrap">
+                    <div class="page-result-brief">抱歉，该地址尚未覆盖相关服务，我们会尽快开通。</div>
+                    <div class="page-result-button"><a href="javascript:;" class="btn btn-default btn-outline btn-radius-sm btn-md-2">切换地址</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 回到顶部 -->
+<a href="#" class="gotop"></a>
+<!-- // 回到顶部 -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/DJDJ.js"></script>
+</body>
+</html>

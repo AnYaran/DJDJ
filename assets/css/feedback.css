@@ -1,0 +1,33 @@
+/* 意见反馈 */
+.feedback {
+  padding: 12px 0.625rem 0;
+  background-color: #fff;
+}
+.feedback p {
+  font-size: 13px;
+  color: #333;
+  line-height: 18px;
+}
+.feedback textarea {
+  width: 100%;
+  height: 135px;
+  border: 1px solid #e6e6e6;
+  font-size: 13px;
+  color: #b8b8b8;
+  padding: 6px 5px;
+  border-radius: 5px;
+  margin: 13px 0 20px 0;
+  resize: none;
+}
+.feedback .f-quit a {
+  display: block;
+  color: #fff;
+  width: 19rem;
+  height: 2.19rem;
+  line-height: 2.19rem;
+  background-color: #ff5761;
+  border-radius: 5px;
+  font-size: 13px;
+  margin: 0 auto;
+  text-align: center;
+}

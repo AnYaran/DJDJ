@@ -1,0 +1,38 @@
+.card {
+	margin: 10px;
+	overflow: hidden;
+	background-color: @white;
+	border: @border-default;
+	border-radius: 6px;
+	.timeline {
+		margin: 0;
+	}
+}
+
+/* ÍË¿îÏêÇé */
+.card-inner-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		padding: 12px 10px 12px 0;
+		border-bottom: @border-default;
+		line-height: 20px;
+		&:last-child {
+			border-bottom: 0;
+		}
+		label {
+			float: left;
+			display: block;
+			width: 66px;
+			padding-left: 10px;
+			color: @gray;
+			text-align: right;
+		}
+		div {
+			margin-left: 85px;
+			color: @gray-darker;
+			word-break: break-all;
+		}
+	}
+}
